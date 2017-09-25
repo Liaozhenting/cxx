@@ -46,7 +46,7 @@
   cxx.fn.init.prototype = cxx.fn;
 
 
-  //判断
+  //工具方法
   cxx.extend({
     isString: function (str) {
       return (typeof str === "string");
@@ -78,6 +78,13 @@
     },
     pageY:function(){
       return event.pageY || event.clientY +document.documentElement.scrollTop;
+    }
+  })
+
+  //实例对象方法
+  cxx.fn.extend({
+    toArray:function(){
+      return slice.call(this,0)
     }
   })
   //AMD
