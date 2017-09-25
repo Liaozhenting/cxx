@@ -2,13 +2,13 @@
   "use strict";
 
   if (typeof module === "object" && typeof module.exports === "object") {
-    module.exports = global.document ?
-      factory(global, true) :
-      //Node.js就算没有document也能使用
-      factory(global, true)
-
-      
-      /***没有document的情况***/
+    module.exports =       
+    //Node.js也能使用
+    factory(global,true)
+    
+   /***没有document就不用的针对浏览器使用情况***/
+    // global.document ?
+    // factory(global, true) :
     // function (w) {
     //   if (!w.document) {
     //     throw new Error("cxx requires a window with a document");
