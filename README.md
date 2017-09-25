@@ -1,2 +1,2 @@
 # cxx
-some tools
+模仿jQuery的小东西
