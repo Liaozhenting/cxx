@@ -4,18 +4,23 @@
   if (typeof module === "object" && typeof module.exports === "object") {
     module.exports = global.document ?
       factory(global, true) :
-      function (w) {
-        if (!w.document) {
-          throw new Error("cxx requires a window with a document");
-        }
-        return factory(w);
-      };
+      //Node.js就算没有document也能使用
+      factory(global, true)
+
+      
+      /***没有document的情况***/
+    // function (w) {
+    //   if (!w.document) {
+    //     throw new Error("cxx requires a window with a document");
+    //   }
+    //   return factory(w);
+    // };
   } else {
     factory(global);
   }
 
   //noGlobla is boolean
-})(typeof window !== 'undefined' ? window : this, function (window, noGlobal) {
+})(typeof window !== 'undefined' ? window : global, function (window, noGlobal) {
   var push = Array.prototype.push;
   var slice = Array.prototype.slice;
 
