@@ -6,5 +6,6 @@ require.config({
 })
 
 require(['cxx'],function(){
-  alert(cxx.isString(''))
+  console.log(cxx.isString(''))
+  console.log(cxx('#app'))
 })
