@@ -1,0 +1,26 @@
+{
+  "name": "cxx",
+  "version": "1.0.0",
+  "description": "模仿jQuery的小东西",
+  "main": "cxx.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liaozhenting/cxx.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liaozhenting/cxx/issues"
+  },
+  "homepage": "https://github.com/Liaozhenting/cxx#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3"
+  }
+}
